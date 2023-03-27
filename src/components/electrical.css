@@ -1,0 +1,18 @@
+.sm-info-box{
+  /* LEFT_INFO_BOX */
+  background-color: whitesmoke;
+  width: 250px;
+  height: 219px;
+  border-radius: 10px;
+}
+.shadow{
+  box-shadow: 0px 0px 31px 24px rgba(0,0,0,1);
+}
+
+.bg-button:hover{
+  background-color: #920cba;
+  border: none;
+}
+.link-hover:hover{
+  color: rgb(94, 124, 139);
+}
