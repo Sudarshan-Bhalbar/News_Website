@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import Sresult from './Sresult';
+import React, { Component } from 'react';
+import Boxes from './Menu/Boxes';
 
-export default class Search extends Component {
+export default class TechNews extends Component {
   constructor() {
     super();
     this.state = {
@@ -52,20 +52,61 @@ export default class Search extends Component {
   render() {
     return (
       <div className="container text-center p-3 ">
+        <div className="container text-center d-flex justify-content-center ">
+          <button
+            disabled={this.state.page <= 1}
+            type="button"
+            className="btn btn-dark mx-3 btn-sm"
+            onClick={this.handlePreviousClick}
+          >
+            &larr; Previous
+          </button>
+          <button
+            disabled={
+              this.state.page + 1 > Math.ceil(this.state.totalResults / 20)
+            }
+            type="button"
+            className="btn btn-dark mx-3 btn-sm"
+            onClick={this.handleNextClick}
+          >
+            Next &rarr;
+          </button>
+        </div>
         <div className="container row  row-cols-auto m-4 ">
           {this.state.articles.map((element) => {
             return (
               <div className="col h-25" key={element.url}>
-                <Sresult
+                <Boxes
                   title={element.title ? element.title.slice(0, 50) : " "}
                   description={
                     element.description ? element.description.slice(0, 95) : " "
                   }
+                  imageUrl={element.urlToImage ? element.urlToImage : " "}
                   newsUrl={element.url ? element.url : " "}
                 />
               </div>
             );
           })}
+        </div>
+        <div className="container text-center d-flex justify-content-center ">
+          <button
+            disabled={this.state.page <= 1}
+            type="button"
+            className="btn btn-dark mx-3 btn-sm"
+            onClick={this.handlePreviousClick}
+          >
+            &larr; Previous
+          </button>
+          <button
+            disabled={
+              this.state.page + 1 > Math.ceil(this.state.totalResults / 20)
+            }
+            type="button"
+            className="btn btn-dark mx-3 btn-sm"
+            onClick={this.handleNextClick}
+          >
+            Next &rarr;
+          </button>
         </div>
       </div>
     );

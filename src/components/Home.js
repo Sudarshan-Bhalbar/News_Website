@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import { NavLink } from "react-router-dom";
 
+
 const Home = () => {
   return (
     <div className="home_bg-img">
@@ -16,7 +17,7 @@ const Home = () => {
             className={
               "text-decoration-none btn btn-outline-light mb-5 ms-5 fs-3"
             }
-            to="/search"
+            to="/technology"
           >
             Explore
           </NavLink>

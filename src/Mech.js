@@ -2,6 +2,8 @@ import React from "react";
 import MechMenubar from "./Menu/Mech_boxes";
 import { useState } from "react";
 import "./electrical.css";
+import Boxes from './Menu/Boxes';
+
 
 const Mech = () => {
   const [val, setVal] = useState([]);

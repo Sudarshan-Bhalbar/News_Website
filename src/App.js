@@ -1,9 +1,9 @@
 import "./App.css";
-import Electrical from "./components/Electrical";
-import IT from "./components/It";
-import Mechanical from "./components/Mech";
-import HotelManagement from "./components/HotelManagement";
-import Medical from "./components/Medical";
+import TechNews from "./components/TechNews";
+import Business from "./components/Business";
+import Educational from "./components/Educational";
+import Travelling from "./components/Travel";
+import Health from "./components/Health";
 import Home from "./components/Home";
 import Search from "./components/Search";
 import Navbar from "./components/Navbar";
@@ -18,11 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/electrical" element={<Electrical />} />
-        <Route path="/it" element={<IT />} />
-        <Route path="/mechanical" element={<Mechanical />} />
-        <Route path="/hm" element={<HotelManagement />} />
-        <Route path="/medical" element={<Medical />} />
+        <Route path="/technology" element={<TechNews pageSize={12} />} />
+        <Route path="/business" element={<Business pageSize={12} />} />
+        <Route path="/educational" element={<Educational pageSize={12} />} />
+        <Route path="/travelling" element={<Travelling pageSize={12} />} />
+        <Route path="/health" element={<Health pageSize={12}/>} />
       </Routes>
     </>
   );

@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <section>
-        <nav className="container-fluid">
+        <nav className="container-fluid text-center">
           <div className="container py-4 mt-3 px-0 fs-4">
             <NavLink
               className="navbar-brand   me-3"
@@ -29,49 +29,49 @@ const Navbar = () => {
               Home
             </NavLink>
             
-            <NavLink
+            {/* <NavLink
               className="navbar-brand   mx-3"
               style={navlinkStyles}
               to="/search"
             >
               Search
-            </NavLink>
+            </NavLink> */}
             
             <NavLink
               className="navbar-brand   mx-3"
               style={navlinkStyles}
-              to="/electrical"
+              to="/technology"
             >
-              Electrical
+              Technology
             </NavLink>
             
             <NavLink
               className="navbar-brand  mx-3"
               style={navlinkStyles}
-              to="/it"
+              to="/business"
             >
-              Information Technology
+              Business
             </NavLink>
             <NavLink
               className="navbar-brand  mx-3"
               style={navlinkStyles}
-              to="/mechanical"
+              to="/Educational"
             >
-              Mechanical
+              Educational
             </NavLink>
             <NavLink
               className="navbar-brand  mx-3"
               style={navlinkStyles}
-              to="/hm"
+              to="/travelling"
             >
-              Hotel Management
+              Nature
             </NavLink>
             <NavLink
               className="navbar-brand  mx-3"
               style={navlinkStyles}
-              to="/medical"
+              to="/health"
             >
-              Medical
+              Health
             </NavLink>
           </div>
         </nav>
